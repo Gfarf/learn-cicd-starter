@@ -18,7 +18,7 @@ func TestAuth(t *testing.T) {
 		"Correct Key":      {header: "Authorization", identifier: "ApiKey ItisaCorrectKey", want: "ItisaCorrectKey", errorWant: ""},
 		"Incorrect Header": {header: "", identifier: "ApiKey ItisaCorrectKey", want: "", errorWant: "no authorization header"},
 		"Malformed Key":    {header: "Authorization", identifier: "Api wrong key", want: "", errorWant: "malformed authorization header"},
-		"Malformed Key 2 ": {header: "Authorization", identifier: "ApiKey", want: "", errorWant: "no authorization header"},
+		"Malformed Key 2 ": {header: "Authorization", identifier: "ApiKey", want: "", errorWant: "malformed authorization header"},
 	}
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
