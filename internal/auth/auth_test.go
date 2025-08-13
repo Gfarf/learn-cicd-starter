@@ -21,6 +21,7 @@ func TestAuth(t *testing.T) {
 		"Malformed Key 2 ": {header: "Authorization", identifier: "ApiKey", want: "", errorWant: "malformed authorization header"},
 	}
 	for name, tc := range tests {
+		//just a comment
 		t.Run(name, func(t *testing.T) {
 			res := &http.Response{
 				Header: http.Header{},
