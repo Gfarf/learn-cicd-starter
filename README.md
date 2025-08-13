@@ -1,4 +1,4 @@
-https://github.com/Gfarf/learn-cicd-starter/actions/workflows/ci.yml/badge.svg
+![testing badge](https://github.com/Gfarf/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-starter (Notely)
 
