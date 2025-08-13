@@ -37,7 +37,8 @@ func TestAuth(t *testing.T) {
 			} else {
 				diff := cmp.Diff(tc.want, got)
 				if diff != "" {
-					t.Fatalf(diff)
+					t.Error(diff)
+					return
 				}
 			}
 		})
