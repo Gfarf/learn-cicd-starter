@@ -1,0 +1,25 @@
+name: cd
+
+on:
+  push:
+    branches: [main]
+  
+jobs:
+  deploy:
+    name: Deploy 
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Set up Go 
+        uses: actions/setup-go@v2
+        with:
+          go-version: "1.20"
+
+      - name: Checkout respository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Build
+        run: scripts/buildprod.sh
