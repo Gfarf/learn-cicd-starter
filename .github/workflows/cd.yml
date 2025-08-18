@@ -21,5 +21,5 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build
+      - name: buildprod.sh
         run: scripts/buildprod.sh
